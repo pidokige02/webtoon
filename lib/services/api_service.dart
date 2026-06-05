@@ -4,11 +4,11 @@ import 'package:webtoon/models/webtoon_model.dart';
 
 class ApiService {
   // baseUrl과 엔드포인트 설정 (일반적으로 제공되는 노마드코더 웹툰 API 예시)
-  final String baseUrl = "https://webtoon-crawler.nomadcoders.workers.dev";
-  final String today = "today";
+  static const String baseUrl = "https://webtoon-crawler.nomadcoders.workers.dev";
+  static const String today = "today";
 
   // 오늘의 웹툰 목록을 가져오는 비동기 함수
-  Future<List<WebtoonModel>> getTodaysToons() async {
+  static Future<List<WebtoonModel>> getTodaysToons() async {
     List<WebtoonModel> webtoonInstances = [];
 
     // API 요청 보낼 URL 생성
